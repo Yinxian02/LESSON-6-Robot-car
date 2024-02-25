@@ -11,12 +11,12 @@ input.onGesture(Gesture.TiltLeft, function () {
 radio.onReceivedString(function (receivedString) {
     basic.showIcon(IconNames.Happy)
     if (receivedString == "left") {
-        pins.servoWritePin(AnalogPin.P0, 180)
-        pins.servoWritePin(AnalogPin.P1, 180)
-    }
-    if (receivedString == "right") {
         pins.servoWritePin(AnalogPin.P0, 0)
         pins.servoWritePin(AnalogPin.P1, 0)
+    }
+    if (receivedString == "right") {
+        pins.servoWritePin(AnalogPin.P0, 180)
+        pins.servoWritePin(AnalogPin.P1, 180)
     }
     if (receivedString == "front") {
         pins.servoWritePin(AnalogPin.P0, 0)
