@@ -1,5 +1,5 @@
 {
-    "name": "car",
+    "name": "robot car",
     "description": "",
     "dependencies": {
         "core": "*",

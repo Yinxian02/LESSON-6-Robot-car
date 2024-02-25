@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    radio.sendString("back")
+    radio.sendString("front")
     basic.pause(1000)
     radio.sendString("stop")
 })
@@ -18,11 +18,11 @@ radio.onReceivedString(function (receivedString) {
         pins.servoWritePin(AnalogPin.P0, 0)
         pins.servoWritePin(AnalogPin.P1, 0)
     }
-    if (receivedString == "back") {
+    if (receivedString == "front") {
         pins.servoWritePin(AnalogPin.P0, 0)
         pins.servoWritePin(AnalogPin.P1, 180)
     }
-    if (receivedString == "front") {
+    if (receivedString == "back") {
         pins.servoWritePin(AnalogPin.P0, 180)
         pins.servoWritePin(AnalogPin.P1, 0)
     }
@@ -32,7 +32,7 @@ radio.onReceivedString(function (receivedString) {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    radio.sendString("front")
+    radio.sendString("back")
     basic.pause(1000)
     radio.sendString("stop")
 })
